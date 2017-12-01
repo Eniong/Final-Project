@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/framework7.material.min.css">
+    <link rel="stylesheet" type="text/css" href="css/framework7.material.colors.min.css">
+    <link rel="stylesheet" type="text/css" href="css/my-app.css">
+</head>
+<body style="background-image: url('img/bg.jpg')">
+      <div id="root" class="page-content">
+        <div class="center sliding" style="font-size: 50px; text-align: center; background-color: peru; opacity: 0.6; font-family: rockwell;">Transpose</div>
+        <div class="content-block" >
+        <div style="text-align: center;">
+            <div style="color: white;"><h1>Chords</h1></div>
+            <div>
+                <input type="text" id="src_id" style="font-size: 30px; width: 100%; text-align: center;">
+            </div>
+            <div style="color: white; background-color: tan;">
+            <h1>Transposed</h1>
+                <div"><pre style="font-size: 30px; color: black;" class="page-content infinite-scroll" data-distance="50" id="dst_id"></div>
+            </div>
+
+            <div class="buttons-row">
+                <a style="font-size: 20px;" href="#" class="button button-big button-fill button-raised color-orange" onclick="shiftMinus('src_id','dst_id')"> -1</a>
+                <a style="font-size: 20px;" href="#" class="button button-big button-fill button-raised color-red" onclick="shiftPlus('src_id','dst_id')"> +1</a>
+            </div>
+            <br>
+            <div>
+               <input class="button button-big button-fill button-raised color-gray" type="button" value="Refresh" onClick="window.location.reload()">
+            </div>
+         </div>
+       
+    </div>
+</body>
+    <script type="text/javascript" src="js/react.min.js"></script>
+    <script type="text/javascript" src="js/react-dom.min.js"></script>
+    <script type="text/javascript" src="js/babel.min.js"></script>
+    <script type="text/javascript" src="js/chords.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!--script type="text/javascript" src="js/my-app.js"></script-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/framework7.js"></script>
+
+</html>
