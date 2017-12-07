@@ -7,33 +7,88 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" type="text/css" href="css/framework7.material.min.css">
     <link rel="stylesheet" type="text/css" href="css/framework7.material.colors.min.css">
-    <link rel="stylesheet" type="text/css" href="css/my-app.css">
-</head>
-<body style="background-image: url('img/bg.jpg')">
-      <div id="root" class="page-content">
-        <div class="center sliding" style="font-size: 50px; text-align: center; background-color: peru; opacity: 0.6; font-family: rockwell;">Transpose</div>
-        <div class="content-block" >
-        <div style="text-align: center;">
-            <div style="color: white;"><h1>Chords</h1></div>
-            <div>
-                <input type="text" id="src_id" style="font-size: 30px; width: 100%; text-align: center;">
-            </div>
-            <div style="color: white; background-color: tan;">
-            <h1>Transposed</h1>
-                <div"><pre style="font-size: 30px; color: black;" class="page-content infinite-scroll" data-distance="50" id="dst_id"></div>
-            </div>
+    <link rel="stylesheet" href="css/my-app.css">
 
-            <div class="buttons-row">
-                <a style="font-size: 20px;" href="#" class="button button-big button-fill button-raised color-orange" onclick="shiftMinus('src_id','dst_id')"> -1</a>
-                <a style="font-size: 20px;" href="#" class="button button-big button-fill button-raised color-red" onclick="shiftPlus('src_id','dst_id')"> +1</a>
+</head>
+<body>
+   
+
+
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal bg-orange">
+    <div class="content-block"> 
+     <div class="list-block">
+        <a href="chords.html" class="external">
+            <div class="button button-fill color-red">
+        Chords
             </div>
-            <br>
-            <div>
-               <input class="button button-big button-fill button-raised color-gray" type="button" value="Refresh" onClick="window.location.reload()">
+        </a>
+      <br>
+        <a href="#" class="open-popup">
+            <div class="button button-fill color-green">
+        About
             </div>
-         </div>
-       
+        </a>
     </div>
+    </div>
+    </div>
+
+<div class="popup tablet-fullscreen bg-red">
+
+    
+    <div class="content-block">
+        <div class="content-block-inner bg-blue">
+
+  <center>
+      <p><h1>Final Project</h1></p>
+      <p>2017</p>
+      <p>Bachelor of Science in Information Technology</p>
+
+      <p>&copy;Cloud</p>
+  </center>
+
+        </div>
+
+      <p><a href="#" class="close-popup button button-fill">Back</a></p>
+      
+    </div>
+
+
+  </div>
+
+    <div class="views" style="background-image: url('img/bg.jpg')">
+        <div class="view view-main">
+            <div class="navbar theme-brown">
+                <div class="navbar-inner">
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+        <div class="content-block">
+            <div style="text-align: center;">
+                <div class="content-block-title" style="color: white;"><h1>Transpose</h1></div>
+                    <div>
+                        <input type="text" placeholder="Input Chords here" id="src_id" style="font-size: 30px; width: 100%; text-align: center;">
+                        </div>
+                    <div style="color: white; background-color: tan;">
+                <div">
+            <pre style="font-size: 30px; color: black;" class="page-content infinite-scroll" data-distance="50" id="dst_id"></pre>
+          </div>
+        </div>
+     <div class="buttons-row">
+            <a style="font-size: 20px;" href="#" class="button button-big button-fill button-raised color-orange" onclick="shiftMinus('src_id','dst_id')"> -1</a>
+            <a style="font-size: 20px;" href="#" class="button button-big button-fill button-raised color-red" onclick="shiftPlus('src_id','dst_id')"> +1</a>
+        </div>
+            <br>
+                <div>
+                    <input class="button button-big button-fill button-raised color-gray" type="button" value="Refresh" onClick="window.location.reload()">
+                </div>
+            </div>
+        </div>
+    </div>
+   
 </body>
     <script type="text/javascript" src="js/react.min.js"></script>
     <script type="text/javascript" src="js/react-dom.min.js"></script>
@@ -41,8 +96,9 @@
     <script type="text/javascript" src="js/chords.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
-    <!--script type="text/javascript" src="js/my-app.js"></script-->
+
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <script type="text/javascript" src="js/framework7.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
 
 </html>
